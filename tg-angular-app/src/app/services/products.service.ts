@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { catchError } from 'rxjs/operators';
+import { throwError } from 'rxjs';
 
 const domain = 'https://result.school';
 
@@ -26,48 +29,33 @@ function addDomainToLinkAndImage(product: IProduct) {
   };
 }
 
-const products: IProduct[] = [
-  {
-    id: '29',
-    title: 'TypeScript',
-    link: '/products/typescript',
-    image: '/img/icons/products/icon-ts.svg',
-    text: 'Основы, типы, компилятор, классы, generic, утилиты, декораторы, advanced...',
-    time: 'С опытом • 2 недели',
-    type: ProductType.Skill,
-  },
-  {
-    id: '33',
-    title: 'Продвинутый JavaScript. Создаем свой Excel',
-    link: '/products/advanced-js',
-    image: '/img/icons/products/icon-advanced-js.svg',
-    text: 'Webpack, Jest, Node.js, State Managers, ООП, ESlint, SASS, Data Layer',
-    time: 'С опытом • 2 месяца',
-    type: ProductType.Intensive,
-  },
-  {
-    id: '26',
-    title: 'Марафон JavaScript «5 дней — 5 проектов»',
-    link: '/products/marathon-js',
-    image: '/img/icons/products/icon-marathon-five-x-five.svg',
-    text: 'плагин для картинок, мини-кол Trello, слайдер картинок, мини-игра, анимированная игра',
-    time: 'С нуля • 1 неделя',
-    type: ProductType.Course,
-  },
-];
-
 @Injectable({
   providedIn: 'root',
 })
 export class ProductsService {
-  readonly products: IProduct[] = products.map(addDomainToLinkAndImage);
+  private apiUrl = 'https://server.realityinvest.ru/api/category';
 
-  // получаем конкретный продукт
+  readonly products: IProduct[] = [];
+
+  constructor(private http: HttpClient) {
+    this.fetchProducts();
+  }
+
+  private fetchProducts() {
+    this.http.get<IProduct[]>(this.apiUrl).pipe(
+      catchError((error) => {
+        console.error('Ошибка при получении продуктов:', error);
+        return throwError(error);
+      })
+    ).subscribe((products) => {
+      this.products.push(...products.map(addDomainToLinkAndImage));
+    });
+  }
+
   getById(id: string) {
     return this.products.find((p) => p.id === id);
   }
 
-  // для удобного распределения по блокам в компоненте
   get byGroup() {
     return this.products.reduce((group, prod) => {
       if (!group[prod.type]) {
