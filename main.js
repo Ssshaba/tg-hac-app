@@ -14,6 +14,16 @@ bot.command('start', (ctx) => {
             Markup.button.webApp('Новое сообщение', `${webAppUrl}/feedback`),
         ])
     )
+
+    // Отправка дополнительного приветственного сообщения
+    ctx.reply(
+        'Пветри!\n\n' +
+        'Обучалки:\n' +
+        '• Первая обучалка \n' +
+        '• вторая обучалка \n'
+    );
+
+
 })
 
 bot.on(message('web_app_data'), async (ctx) => {
