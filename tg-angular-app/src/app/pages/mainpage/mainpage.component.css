@@ -1,16 +1,30 @@
 .center {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* это поможет разместить кнопку по центру вертикально */
+    height: 100vh;
+  }
+  
+  .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   
   .yellow-button {
-    background-color: yellow;
+    background: radial-gradient(circle, #FFDD00, #E3CA22);
+    color: white;
+    width: 266px;
+    height: 77px;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    cursor: pointer;
+    font-weight: 700;
+    cursor: pointer;  
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.37);
   }
   
