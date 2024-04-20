@@ -12,11 +12,17 @@ export class RandompersonComponent implements OnInit {
 
   constructor(private router: Router, private randompersonService: RandompersonService) { }
 
-  ngOnInit(): void {
-    this.user = this.randompersonService.getRandomUser();
+  async ngOnInit() {
+    try {
+      this.user = await this.randompersonService.getRandomUser();
+      console.log('Данные пользователя:', this.user);
+    } catch (error) {
+      console.error('Ошибка при получении случайного пользователя:', error);
+      // Можно добавить обработку ошибки здесь, если это необходимо
+    }
   }
 
-  goToProfile() {
-    this.router.navigate(['/profile']);
-  }
+   goToProfile() {
+     this.router.navigate(['/profile']);
+   }
 }

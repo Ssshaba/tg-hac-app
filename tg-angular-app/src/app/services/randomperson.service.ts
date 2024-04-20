@@ -1,22 +1,25 @@
-// randomperson.service.ts
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class RandompersonService {
-  private users = [
-    { id: 1, name: 'John', role: 'Developer', age: '45', photo: 'avatar.png' },
-    { id: 2, name: 'Alice', role: 'Designer', age: '23', photo: 'avatar.png' },
-    { id: 3, name: 'Bob', role: 'Manager', age: '33', photo: 'avatar.png' },
-    { id: 4, name: 'Emma', role: 'Tester', age: '32', photo: 'avatar.png' }
-  ];
+  private apiUrl = 'https://persikivk.ru/api/users/random-user';
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  getRandomUser() {
-    const randomIndex = Math.floor(Math.random() * this.users.length);
-    return this.users[randomIndex];
+  async getRandomUser(): Promise<any> {
+    // Установка заголовка Content-Type в application/json
+    const headers = new HttpHeaders().set('Content-Type', 'application/json');
+
+    // Выполнение HTTP-запроса и ожидание ответа
+    try {
+      const response = await this.http.get<any>(this.apiUrl, { headers }).toPromise();
+      return response;
+    } catch (error) {
+      console.error('Ошибка при выполнении HTTP-запроса:', error);
+      throw error; // Можно пробросить ошибку, чтобы компонент мог ее обработать
+    }
   }
 }
-

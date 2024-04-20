@@ -1,33 +1,31 @@
-<body>
-    <div class="random-person">
-        <div class="card">
-            <img [src]="'assets/' + user.photo" alt="User Photo">
-            <div style="padding:  0.5em;">
-                <h2>{{ user.name }}</h2>
-                <p>Возраст: {{ user.age }}</p>
-                <div class="detailed">
-                    <p>Роль: {{ user.role }}</p>
-                    <a>Подробнее</a>
-                </div>
+<div class="random-person">
+    <div class="card">
+        <!-- <img [src]="'assets/' + user.photo" alt="User Photo"> -->
+        <div style="padding: 0.5em;">
+            <h2>{{ user.name }}</h2>
+            <!-- <p>Возраст: {{ user.age }}</p> -->
+            <div class="detailed">
+                <p>Отдел: {{ user.status }}</p>
+                <a>Подробнее</a>
             </div>
         </div>
-        <div class="buttons">
-            <button class="torefusebtn">Отказаться<img style="height: 24px; width: 24px;" src = "assets\ghost_outline_24.png"></button>
-            <button class="towritebtn">Написать<img style="height: 24px; width: 24px;" src = "assets\pen_outline_24.png"></button>
-        </div>
-        <div class="button-group">
-            <button class="icon-button">
-                <img src="assets/calendar_icon.png" alt="calendar icon" class="calendar_icon">
-                <span>Статистика</span>
-            </button>
-            <button class="icon-button" (click)="goToProfile()">
-                <img src="assets/profile_icon.png" alt="profile icon" class="profile_icon">
-                <span>Профиль</span>
-            </button>        
-            <button class="icon-button">
-                <img src="assets/gift_icon.png" alt="gift icon" class="gift_icon">
-                <span>Бонусы</span>
-            </button>
-        </div>
     </div>
-</body>
+    <div class="buttons">
+        <button class="torefusebtn">Отказаться<img style="height: 24px; width: 24px;" src="assets\ghost_outline_24.png"></button>
+        <button class="towritebtn">Написать<img style="height: 24px; width: 24px;" src="assets\pen_outline_24.png"></button>
+    </div>
+    <div class="button-group">
+        <button class="icon-button">
+            <img src="assets/calendar_icon.png" alt="calendar icon" class="calendar_icon">
+            <span>Статистика</span>
+        </button>
+        <button class="icon-button" (click)="goToProfile()">
+            <img src="assets/profile_icon.png" alt="profile icon" class="profile_icon">
+            <span>Профиль</span>
+        </button>
+        <button class="icon-button">
+            <img src="assets/gift_icon.png" alt="gift icon" class="gift_icon">
+            <span>Бонусы</span>
+        </button>
+    </div>
+</div>
