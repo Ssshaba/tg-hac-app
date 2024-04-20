@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 
-/* body {
+/*.random-person {
     background-color:whitesmoke;
 } */
 
@@ -21,16 +21,17 @@ a {
 }
 
 img {
-    width: 313px;
+    width: 100%;
 }
 
 .card {
-    width: 313px;
+    position: relative;
+    width: 85%;
     gap: 0px;
     border-radius: 20px;
     opacity: 0px;
     background-color: white;
-    margin: 1em;
+    margin: 1em auto;
     box-shadow: 0px 4px 17px 0px #0000001A;
 }
 
@@ -49,6 +50,8 @@ img {
     border-color: #FFF6A1;
     border-radius: 0.7em;
     cursor: pointer; 
+    margin-left: 5px;
+
 }
 
 .torefusebtn {
@@ -66,16 +69,61 @@ img {
     border-color: #FFC3A1;
     border-radius: 0.7em;
     cursor: pointer; 
+    margin-right: 5px;
 }
 
 .buttons {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
 }
-
 .detailed {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+
+.button-group {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    column-gap: 5px;
+}
+
+.icon-button {
+    background-color: #FFDD00;
+    border: 2px solid #FFF6A1;
+    color: #747474;
+    width: 120px;
+    height: 82px;
+    padding: 10px 0 10px 0;
+    margin: 0 5px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-button img {
+    margin-bottom: 5px;
+}
+.calendar_icon {
+  width: 22px;
+  height: 24px;
+}
+
+.profile_icon {
+  width: 28px;
+  height: 28px;
+}
+
+.gift_icon {
+  width: 27.5px;
+  height: 27.5px;
+}
+
+.icon-button span {
+    font-size: 14px;
+    font-weight: 500;
 }

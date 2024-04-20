@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { RandompersonService } from '../../services/randomperson.service';
 
 @Component({
@@ -9,9 +10,13 @@ import { RandompersonService } from '../../services/randomperson.service';
 export class RandompersonComponent implements OnInit {
   user: any;
 
-  constructor(private randompersonService: RandompersonService) { }
+  constructor(private router: Router, private randompersonService: RandompersonService) { }
 
   ngOnInit(): void {
     this.user = this.randompersonService.getRandomUser();
+  }
+
+  goToProfile() {
+    this.router.navigate(['/profile']);
   }
 }
