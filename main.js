@@ -52,15 +52,16 @@ bot.command('start', async (ctx) => {
         );
 
         ctx.reply(
-            `Привет!\n\n` +
+
+            `Привет!!\n\n` +
             `Обучалки:\n` +
-            `• [Быстрое начало](${webAppUrl})\n` +
-            // `• <a href="${webAppUrl}edueditprof">Как редактировать профиль?</a>\n` +
-            // `• <a href="${webAppUrl}edumeetcollegue">Как познакомиться с коллегой?</a>\n` +
-            // `• <a href="${webAppUrl}education">Что такое "Статистика" и как её посмотреть?</a>\n` +
-            // `• <a href="${webAppUrl}edubonus">Что такое "Бонусы" и как ими пользоваться?</a>\n`, +
-            //     `• <a href="${webAppUrl}education">Как администратору добавить профиль сотрудника ?</a>\n`, +
-            //     `• <a href="${webAppUrl}education">Как администратору удалить профиль сотрудника ?</a>\n`,
+            `• [Быстрое начало](${webAppUrl}education)\n` +
+            `• [Как редактировать профиль?](${webAppUrl}edueditprof)\n` + 
+            `• [Как познакомиться с коллегой?](${webAppUrl}edumeetcollegue)\n` +
+            `• [Что такое "Статистика" и как её посмотреть?](${webAppUrl}education)\n` +
+            `• [Что такое "Бонусы" и как ими пользоваться?](${webAppUrl}edubonus)\n` +
+            `• [Как администратору добавить профиль сотрудника ?](${webAppUrl}education)\n` +
+            `• [Как администратору удалить профиль сотрудника ?](${webAppUrl}education)\n`,
             { parse_mode: 'Markdown' }
         );
     } else {
