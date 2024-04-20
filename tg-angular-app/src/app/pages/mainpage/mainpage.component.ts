@@ -16,4 +16,9 @@ export class MainpageComponent {
     const randomUser = this.randomPersonService.getRandomUser();
     this.router.navigate(['/randomperson'], { state: { user: randomUser } });
   }
+
+  goToProfile() {
+    this.router.navigate(['/profile']);
+  }
+
 }
