@@ -11,10 +11,35 @@ const bot = new Telegraf(token)
 
 
 bot.command('start', async (ctx) => {
+    // фото юзера
+    // try {
+    //     // Получаем информацию о фотографиях профиля пользователя
+    //     const userProfilePhotos = await ctx.telegram.getUserProfilePhotos(ctx.from.id);
+    //
+    //     // Проверяем, есть ли у пользователя фотографии
+    //     if (userProfilePhotos.total_count > 0) {
+    //         // Получаем информацию о файле фотографии с самым большим размером
+    //         const photoFileId = userProfilePhotos.photos[0][0].file_id;
+    //
+    //         // Получаем URL фотографии
+    //         const photoURL = await ctx.telegram.getFileLink(photoFileId);
+    //
+    //         // Отправляем URL фотографии пользователю в чат
+    //         await ctx.reply(`Ссылка на вашу фотографию профиля: ${photoURL}`);
+    //     } else {
+    //         await ctx.reply('У вас нет фотографий в профиле.');
+    //     }
+    // } catch (error) {
+    //     console.error('Ошибка при получении фотографии профиля:', error);
+    //     await ctx.reply('Произошла ошибка при получении фотографии профиля.');
+    // }
+
 
     // Получаем список пользователей
     const response = await axios.get(getUsers);
     const users = response.data;
+    console.log('Telegram request:', ctx.update);
+
     //  есть ли пользователь в списке
     const user = users.find(user => user.tgId === ctx.from.id.toString());
     if (user) {
@@ -34,12 +59,12 @@ bot.command('start', async (ctx) => {
             `• <a href="${webAppUrl}edumeetcollegue">Как познакомиться с коллегой?</a>\n` +
             `• <a href="${webAppUrl}education">Что такое "Статистика" и как её посмотреть?</a>\n` +
             `• <a href="${webAppUrl}edubonus">Что такое "Бонусы" и как ими пользоваться?</a>\n`, +
-            `• <a href="${webAppUrl}education">Как администратору добавить профиль сотрудника ?</a>\n`, +
-            `• <a href="${webAppUrl}education">Как администратору удалить профиль сотрудника ?</a>\n`,
+                `• <a href="${webAppUrl}education">Как администратору добавить профиль сотрудника ?</a>\n`, +
+                `• <a href="${webAppUrl}education">Как администратору удалить профиль сотрудника ?</a>\n`,
             { parse_mode: 'HTML' }
         );
     } else {
-       
+
         ctx.reply(`Извините, ваш chat id: ${ctx.from.id}, не имеет доступа к этому боту.`);
     }
 
