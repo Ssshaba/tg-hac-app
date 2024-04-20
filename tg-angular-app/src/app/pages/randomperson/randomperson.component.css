@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+/* body {
+    background-color:whitesmoke;
+} */
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+p, ul, li, button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: underline;
+    color: #747474;
+    cursor: pointer;
+}
+
+img {
+    width: 313px;
+}
+
+.card {
+    width: 313px;
+    gap: 0px;
+    border-radius: 20px;
+    opacity: 0px;
+    background-color: white;
+    margin: 1em;
+    box-shadow: 0px 4px 17px 0px #0000001A;
+}
+
+.towritebtn {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1em;
+    width: 145px;
+    height: 45px;
+    gap: 0px;
+    opacity: 0px;
+    color: white;
+    background: #FFDD00;
+    border: solid;
+    border-color: #FFF6A1;
+    border-radius: 0.7em;
+    cursor: pointer; 
+}
+
+.torefusebtn {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1em;
+    width: 145px;
+    height: 45px;
+    gap: 0px;
+    opacity: 0px;
+    color: white;
+    background: #FF5C00;
+    border: solid ;
+    border-color: #FFC3A1;
+    border-radius: 0.7em;
+    cursor: pointer; 
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.detailed {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}

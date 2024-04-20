@@ -1,5 +1,17 @@
-<div>
-    <h2>{{ user.name }}</h2>
-    <p>Роль: {{ user.role }}</p>
-    <img [src]="'assets/' + user.photo" alt="User Photo">
-</div>
+<body>
+    <div class="card">
+        <img [src]="'assets/' + user.photo" alt="User Photo">
+        <div style="padding:  0.5em;">
+            <h2>{{ user.name }}</h2>
+            <p>Возраст: {{ user.age }}</p>
+            <div class="detailed">
+                <p>Роль: {{ user.role }}</p>
+                <a>Подробнее</a>
+            </div>
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="torefusebtn">Отказаться<img style="height: 24px; width: 24px;" src = "assets\ghost_outline_24.png"></button>
+        <button class="towritebtn">Написать<img style="height: 24px; width: 24px;" src = "assets\pen_outline_24.png"></button>
+    </div>
+</body>
