@@ -1,19 +1,19 @@
 // mainpage.component.ts
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { RandompersonService } from '../../services/randomperson.service';
 
 @Component({
   selector: 'app-mainpage',
-  standalone: true,
   templateUrl: './mainpage.component.html',
   styleUrls: ['./mainpage.component.css']
 })
 export class MainpageComponent {
-  randomUser: any; // Типизируйте, если возможно
 
-  constructor(private randomPersonService: RandompersonService) { }
+  constructor(private router: Router, private randomPersonService: RandompersonService) { }
 
-  showRandomUser() {
-    this.randomUser = this.randomPersonService.getRandomUser();
+  findRandomPerson() {
+    const randomUser = this.randomPersonService.getRandomUser();
+    this.router.navigate(['/randomperson'], { state: { user: randomUser } });
   }
 }

@@ -1,12 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { RandompersonService } from '../../services/randomperson.service';
 
 @Component({
   selector: 'app-randomperson',
-  standalone: true,
-  imports: [],
   templateUrl: './randomperson.component.html',
-  styleUrl: './randomperson.component.css'
+  styleUrls: ['./randomperson.component.css']
 })
-export class RandompersonComponent {
+export class RandompersonComponent implements OnInit {
+  user: any;
 
+  constructor(private randompersonService: RandompersonService) { }
+
+  ngOnInit(): void {
+    this.user = this.randompersonService.getRandomUser();
+  }
 }
