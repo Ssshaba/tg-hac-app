@@ -5,6 +5,7 @@ import { ProductComponent } from './pages/product/product.component';
 import {EducationComponent} from "./components/education/education.component";
 import { MainpageComponent } from './pages/mainpage/mainpage.component';
 import { RandompersonComponent } from './pages/randomperson/randomperson.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 export const routes: Routes = [
   { path: '', component: MainpageComponent, pathMatch: 'full' },
