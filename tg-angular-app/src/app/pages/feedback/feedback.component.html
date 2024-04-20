@@ -1,1 +1,9 @@
-<p>feedback works!</p>
+<form class="centered form">
+    <h1>Предоставление доступа</h1>
+    <h3 class="mb">Введите chat ID сотрудника для предоставления ему доступа к приложению</h3>
+    <textarea
+      [value]="feedback()"
+      (input)="handleChange($event)"
+      class="form-control">
+    </textarea>
+</form>

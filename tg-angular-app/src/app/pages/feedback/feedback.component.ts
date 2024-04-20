@@ -4,22 +4,9 @@ import { TelegramService } from '../../services/telegram.service';
 @Component({
   selector: 'app-feedback',
   standalone: true,
-  styles: `
-    .form {
-      heigth: 70vh;
-      justify-content: center;
-    }
-  `,
-  template: `
-    <form class="centered form">
-      <h2 class="mb">Обратная связь</h2>
-      <textarea
-        [value]="feedback()"
-        (input)="handleChange($event)"
-        class="form-control"
-      ></textarea>
-    </form>
-  `,
+  imports: [],
+  styleUrl: './feedback.component.css',
+  templateUrl: './feedback.component.html'
 })
 export class FeedbackComponent implements OnInit, OnDestroy {
   // создаем стейт через сигнал
@@ -31,8 +18,7 @@ export class FeedbackComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.telegram.MainButton.setText('Отправить сообщение');
-    this.telegram.MainButton.show();
-    this.telegram.MainButton.disable();
+    this.telegram.MainButton.hide();
     this.telegram.MainButton.onClick(this.sendData);
   }
 
@@ -45,9 +31,9 @@ export class FeedbackComponent implements OnInit, OnDestroy {
     // изменение стейта при изменении textarea
     this.feedback.set(event.target.value);
     if (this.feedback().trim()) {
-      this.telegram.MainButton.enable();
+      this.telegram.MainButton.show();
     } else {
-      this.telegram.MainButton.disable();
+      this.telegram.MainButton.hide();
     }
   }
 

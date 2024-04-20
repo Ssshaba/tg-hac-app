@@ -70,4 +70,10 @@ bot.command('start', async (ctx) => {
     }
 
 });
+
+bot.on(message('web_app_data'), async ctx => {
+    const data = ctx.webAppData.data.json()
+    ctx.reply('Chat ID добавленного сотрудника: ${data?.feedback}' ?? 'empty message')
+})
+
 bot.launch()
