@@ -3,6 +3,16 @@
     overflow-y: auto;
 }
 
+.go-to-main {
+    margin: 20px;
+}
+
+.go-to-main img {
+    width: 28px;
+    height: 28px;
+    display: block;
+}
+
 .bonus {
     padding: 16px 17px;
 }

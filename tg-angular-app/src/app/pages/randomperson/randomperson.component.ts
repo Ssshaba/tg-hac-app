@@ -32,4 +32,8 @@ export class RandompersonComponent implements OnInit {
    goToBonus() {
     this.router.navigate(['/bonus']);
   }
+
+  goToMainPage() {
+    this.router.navigate(['/']);
+  }
 }

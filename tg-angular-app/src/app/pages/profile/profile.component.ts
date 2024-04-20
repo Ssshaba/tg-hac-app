@@ -27,4 +27,8 @@ export class ProfileComponent implements OnInit {
   goToBonus() {
     this.router.navigate(['/bonus']);
   }
+  
+  goToMainPage() {
+    this.router.navigate(['/']);
+  }
 }

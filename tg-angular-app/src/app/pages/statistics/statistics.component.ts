@@ -25,4 +25,7 @@ export class StatisticsComponent {
     this.router.navigate(['/bonus']);
   }
 
+  goToMainPage() {
+    this.router.navigate(['/']);
+  }
 }

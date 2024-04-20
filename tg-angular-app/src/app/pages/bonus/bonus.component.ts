@@ -31,6 +31,10 @@ export class BonusComponent {
   goToBonus() {
     this.router.navigate(['/bonus']);
   }
+
+  goToMainPage() {
+    this.router.navigate(['/']);
+  }
 }
 
 // import { Component, OnInit } from '@angular/core';
