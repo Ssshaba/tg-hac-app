@@ -4,12 +4,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class RandompersonService {
-  private apiUrl = 'https://persikivk.ru/api/users/random-user';
+export class BonusService {
+  private apiUrl = 'https://persikivk.ru/api/users/stocks';
 
   constructor(private http: HttpClient) { }
 
-  async getRandomUser(): Promise<any> {
+  async getBonusPartner(): Promise<any> {
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
 
     try {

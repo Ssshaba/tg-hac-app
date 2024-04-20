@@ -1,0 +1,58 @@
+.button-group {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 5px;
+    padding-top: 20px;
+    background-color: white;
+    z-index: 2;
+}
+
+.icon-button {
+    background-color: #FFDD00;
+    border: 2px solid #FFF6A1;
+    color: #747474;
+    width: 120px;
+    height: 82px;
+    padding: 10px 0 10px 0;
+    margin: 0 5px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-button:nth-child(3) {
+    color: #4E3535;
+    border: 2px solid #ECB300;
+    padding-top: 7px;
+}
+
+.icon-button img {
+    margin-bottom: 5px;
+}
+
+.calendar_icon {
+    width: 22px;
+    height: 24px;
+}
+
+.profile_icon {
+    width: 28px;
+    height: 28px;
+}
+
+.gift_icon {
+    width: 27.5px;
+    height: 27.5px;
+}
+
+.icon-button span {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -9,9 +10,21 @@ import { ActivatedRoute } from '@angular/router';
 export class ProfileComponent implements OnInit {
   user: any;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private router: Router,private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.user = history.state.user;
+  }
+
+  goToStatistics() {
+    this.router.navigate(['/statistics']);
+  }
+  
+  goToProfile() {
+    this.router.navigate(['/profile']);
+  }
+
+  goToBonus() {
+    this.router.navigate(['/bonus']);
   }
 }

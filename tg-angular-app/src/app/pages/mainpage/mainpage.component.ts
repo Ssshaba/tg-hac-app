@@ -17,8 +17,16 @@ export class MainpageComponent {
     this.router.navigate(['/randomperson'], { state: { user: randomUser } });
   }
 
+  goToStatistics() {
+    this.router.navigate(['/statistics']);
+  }
+
   goToProfile() {
     this.router.navigate(['/profile']);
+  }
+
+  goToBonus() {
+    this.router.navigate(['/bonus']);
   }
 
 }

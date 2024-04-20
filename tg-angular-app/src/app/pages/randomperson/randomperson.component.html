@@ -5,7 +5,7 @@
             <h2>{{ user.name }}</h2>
             <!-- <p>Возраст: {{ user.age }}</p> -->
             <div class="detailed">
-                <p>Отдел: {{ user.status }}</p>
+                <p>Отдел: {{ user.department }}</p>
                 <a>Подробнее</a>
             </div>
         </div>
@@ -15,7 +15,7 @@
         <button class="towritebtn">Написать<img style="height: 24px; width: 24px;" src="assets\pen_outline_24.png"></button>
     </div>
     <div class="button-group">
-        <button class="icon-button">
+        <button class="icon-button" (click)="goToStatistics()">
             <img src="assets/calendar_icon.png" alt="calendar icon" class="calendar_icon">
             <span>Статистика</span>
         </button>
@@ -23,7 +23,7 @@
             <img src="assets/profile_icon.png" alt="profile icon" class="profile_icon">
             <span>Профиль</span>
         </button>
-        <button class="icon-button">
+        <button class="icon-button" (click)="goToBonus()">
             <img src="assets/gift_icon.png" alt="gift icon" class="gift_icon">
             <span>Бонусы</span>
         </button>

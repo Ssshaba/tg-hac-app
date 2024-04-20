@@ -43,16 +43,16 @@
             </div>
         </div>
         
-        <div class="button-group">
+        <div class="button-group" (click)="goToStatistics()">
             <button class="icon-button">
                 <img src="assets/calendar_icon.png" alt="calendar icon" class="calendar_icon">
                 <span>Статистика</span>
             </button>
-            <button class="icon-button">
+            <button class="icon-button" (click)="goToProfile()">
                 <img src="assets/profile_icon_white.png" alt="profile icon" class="profile_icon">
                 <span>Профиль</span>
             </button>        
-            <button class="icon-button">
+            <button class="icon-button" (click)="goToBonus()">
                 <img src="assets/gift_icon.png" alt="gift icon" class="gift_icon">
                 <span>Бонусы</span>
             </button>

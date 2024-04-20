@@ -9,6 +9,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { EdueditprofileComponent } from './components/edueditprofile/edueditprofile.component';
 import { EdumeetcollegueComponent } from './components/edumeetcollegue/edumeetcollegue.component';
 import { EdubonusComponent } from './components/edubonus/edubonus.component';
+import { BonusComponent } from './pages/bonus/bonus.component';
+import { StatisticsComponent } from './pages/statistics/statistics.component';
 
 export const routes: Routes = [
   { path: '', component: MainpageComponent, pathMatch: 'full' },
@@ -20,5 +22,7 @@ export const routes: Routes = [
   { path: 'profile', component: ProfileComponent},
   { path: 'edueditprof', component: EdueditprofileComponent},
   { path: 'edumeetcollegue', component: EdumeetcollegueComponent},
-  { path: 'edubonus', component: EdubonusComponent}
+  { path: 'edubonus', component: EdubonusComponent},
+  { path: 'bonus', component: BonusComponent },
+  { path: 'statistics', component: StatisticsComponent }
 ];

@@ -155,6 +155,7 @@
 
 .icon-button:nth-child(2) {
     color: #4E3535;
+    border: 2px solid #ECB300;
     padding-top: 7px;
 }
 

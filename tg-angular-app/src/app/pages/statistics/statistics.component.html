@@ -1,10 +1,21 @@
 <body>
-    <div class="center">
-        <img src="assets/logo.png" class="logo" (click)="findRandomPerson()">
-        <button class="yellow-button" (click)="findRandomPerson()">Найти</button>
+    <div class="statistics">
+        <div class="card">
+            <div class="card-content">
+                <h2 class="card-title">Встреч за этот месяц:</h2>
+                <div class="yellow-number">8</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <h2 class="card-title">Встреч за этот месяц:</h2>
+                <div class="yellow-number">17</div>
+            </div>
+        </div>
+        
         <div class="button-group">
             <button class="icon-button" (click)="goToStatistics()">
-                <img src="assets/calendar_icon.png" alt="calendar icon" class="calendar_icon">
+                <img src="assets/calendar_icon_black.png" alt="calendar icon" class="calendar_icon">
                 <span>Статистика</span>
             </button>
             <button class="icon-button" (click)="goToProfile()">
@@ -15,7 +26,6 @@
                 <img src="assets/gift_icon.png" alt="gift icon" class="gift_icon">
                 <span>Бонусы</span>
             </button>
-        </div>
+        </div>    
     </div>
-    
 </body>

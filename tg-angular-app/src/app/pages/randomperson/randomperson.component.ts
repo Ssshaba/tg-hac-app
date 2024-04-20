@@ -18,11 +18,18 @@ export class RandompersonComponent implements OnInit {
       console.log('Данные пользователя:', this.user);
     } catch (error) {
       console.error('Ошибка при получении случайного пользователя:', error);
-      // Можно добавить обработку ошибки здесь, если это необходимо
     }
   }
 
+  goToStatistics() {
+    this.router.navigate(['/statistics']);
+  }
+  
    goToProfile() {
      this.router.navigate(['/profile']);
    }
+
+   goToBonus() {
+    this.router.navigate(['/bonus']);
+  }
 }
