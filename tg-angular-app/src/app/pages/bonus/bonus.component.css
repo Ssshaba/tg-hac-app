@@ -1,3 +1,80 @@
+.cards {
+    max-height: calc(100vh - 130px);
+    overflow-y: auto;
+}
+
+.bonus {
+    padding: 16px 17px;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    width: calc(100% - 34px);
+    margin: 30px auto;
+    border-radius: 10px;
+    display: flex;
+}
+
+.image-container {
+    width: 108px;
+    height: 124px;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.content {
+    font-family: 'Montserrat', sans-serif;
+    flex-grow: 1;
+    margin-left: 14px;
+    margin-top: 0;
+    max-width: 230px;
+}
+
+.content h2 {
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.content p {
+    color: #6D7885;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.bold-condition {
+    display: flex;
+    align-items: baseline;
+    color: #6D7885;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.bold-condition p {
+    margin: 0;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.spacer {
+    height: 120px; /* Высота пустого блока */
+    width: 100%; /* Ширина равна ширине родительского контейнера */
+    position: fixed; /* Фиксированное позиционирование */
+    bottom: 0; /* Прижимаем к нижнему краю экрана */
+    background-color: transparent; /* Цвет фона, если необходим */
+}
+
+
 .button-group {
     position: fixed;
     bottom: 20px;
@@ -7,7 +84,6 @@
     justify-content: center;
     column-gap: 5px;
     padding-top: 20px;
-    background-color: white;
     z-index: 2;
 }
 

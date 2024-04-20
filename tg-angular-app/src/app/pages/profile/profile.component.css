@@ -1,5 +1,6 @@
 .profile {
-    background-color: white;
+    max-height: calc(100vh - 130px);
+    overflow-y: auto;
 }
 
 
@@ -62,7 +63,6 @@
 
 .profile-desc {
     padding-top: 10px;
-    padding-bottom: 100px;
     overflow-y: auto;
 }
 
