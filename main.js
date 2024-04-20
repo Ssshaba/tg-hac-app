@@ -30,7 +30,7 @@ bot.command('start', async (ctx) => {
             `Привет!\n\n` +
             `Обучалки:\n` +
             `• <a href="${webAppUrl}education">Быстрое начало</a>\n` +
-            `• <a href="${webAppUrl}education">Как редактировать профиль?</a>\n` +
+            `• <a href="${webAppUrl}edueditprof">Как редактировать профиль?</a>\n` +
             `• <a href="${webAppUrl}education">Как назначить удобные для встреч дни?</a>\n` +
             `• <a href="${webAppUrl}education">Как изменить дни для встреч?</a>\n` +
             `• <a href="${webAppUrl}education">Как удалить профиль?</a>\n`,
