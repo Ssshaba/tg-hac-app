@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #E8E8E8;
   }
   
   .logo {
@@ -51,8 +52,21 @@
 }
 
 .icon-button img {
-    width: 30px; /* Подстройте размеры иконки по вашему усмотрению */
     margin-bottom: 5px;
+}
+.calendar_icon {
+  width: 22px;
+  height: 24px;
+}
+
+.profile_icon {
+  width: 28px;
+  height: 28px;
+}
+
+.gift_icon {
+  width: 27.5px;
+  height: 27.5px;
 }
 
 .icon-button span {
