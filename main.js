@@ -18,7 +18,7 @@ bot.command('start', (ctx) => {
         ctx.reply(
             'Добро пожаловать! Нажмите на кнопку ниже, чтобы запустить приложение',
             Markup.keyboard([
-                Markup.button.webApp('Отправить сообщение', `${webAppUrl}/feedback`),
+                Markup.button.webApp('Запустить приложение', `${webAppUrl}`),
                 Markup.button.webApp('Новое сообщение', `${webAppUrl}/feedback`),
             ])
         );
