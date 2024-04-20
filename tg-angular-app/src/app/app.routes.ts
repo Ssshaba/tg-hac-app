@@ -6,6 +6,7 @@ import {EducationComponent} from "./components/education/education.component";
 import { MainpageComponent } from './pages/mainpage/mainpage.component';
 import { RandompersonComponent } from './pages/randomperson/randomperson.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { EdueditprofileComponent } from './components/edueditprofile/edueditprofile.component';
 
 export const routes: Routes = [
   { path: '', component: MainpageComponent, pathMatch: 'full' },
@@ -15,4 +16,5 @@ export const routes: Routes = [
   { path: 'product/:id', component: ProductComponent },
   { path: 'education', component: EducationComponent },
   { path: 'profile', component: ProfileComponent},
+  { path: 'edueditprof', component: EdueditprofileComponent}
 ];
