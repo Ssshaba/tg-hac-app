@@ -13,4 +13,5 @@ export const routes: Routes = [
   { path: 'feedback', component: FeedbackComponent },
   { path: 'product/:id', component: ProductComponent },
   { path: 'education', component: EducationComponent },
+  { path: 'profile', component: ProfileComponent},
 ];
