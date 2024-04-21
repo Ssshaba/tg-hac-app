@@ -5,6 +5,7 @@ import {message} from "telegraf/filters";
 const token = '6962938579:AAE_Zi1vuUL5Fr3gKXSIT7xN9hAQVhh_mTY'
 const webAppUrl = 'https://angular-app-tg.web.app/'
 const getUsers = 'https://persikivk.ru/api/users';
+const createUserUrl = 'https://persikivk.ru/api/users/create';
 
 
 const bot = new Telegraf(token)
@@ -43,11 +44,36 @@ bot.command('start', async (ctx) => {
     //  есть ли пользователь в списке
     const user = users.find(user => user.tgId === ctx.from.id.toString());
     if (user) {
+
+        // Проверяем, является ли пользователь администратором
+        if (user.status !== 'admin') {
+            ctx.reply(
+                'Добро пожаловать! Нажмите на кнопку ниже, чтобы запустить приложение',
+                Markup.keyboard([
+                    Markup.button.webApp('Запустить приложение', `${webAppUrl}`),
+                ])
+            );
+
+            ctx.reply(
+
+                `Привет!!\n\n` +
+                `Обучалки:\n` +
+                `• [Быстрое начало](${webAppUrl}education)\n` +
+                `• [Как редактировать профиль?](${webAppUrl}edueditprof)\n` +
+                `• [Как познакомиться с коллегой?](${webAppUrl}edumeetcollegue)\n` +
+                `• [Что такое "Статистика" и как её посмотреть?](${webAppUrl}education)\n` +
+                `• [Что такое "Бонусы" и как ими пользоваться?](${webAppUrl}edubonus)\n` +
+                `• [Как администратору добавить профиль сотрудника ?](${webAppUrl}education)\n` +
+                `• [Как администратору удалить профиль сотрудника ?](${webAppUrl}education)\n`,
+                { parse_mode: 'Markdown' }
+            );
+            return;
+        }
         ctx.reply(
-            'Добро пожаловать! Нажмите на кнопку ниже, чтобы запустить приложение',
+            'Добро пожаловать! Используйте кнопки ниже чтобы запустить пользователя или добавить сотрудника',
             Markup.keyboard([
                 Markup.button.webApp('Запустить приложение', `${webAppUrl}`),
-                Markup.button.webApp('Новое сообщение', `${webAppUrl}/feedback`),
+                Markup.button.webApp('Добавить сотрудника', `${webAppUrl}/feedback`),
             ])
         );
 
@@ -71,9 +97,23 @@ bot.command('start', async (ctx) => {
 
 });
 
+
 bot.on(message('web_app_data'), async (ctx) => {
-    const data = ctx.webAppData.data.json()
-    ctx.reply(`Chat ID добавленного сотрудника: ${data?.feedback}` ?? 'empty message')
-})
+    const data = ctx.webAppData.data.json();
+    const tgId = data?.feedback;
+
+    if (tgId) {
+        try {
+            await axios.post(createUserUrl, { tgId });
+            ctx.reply(`Пользователь с tgId ${tgId} успешно создан.`);
+        } catch (error) {
+            console.error('Ошибка при создании пользователя:', error);
+            ctx.reply('Произошла ошибка при создании пользователя.');
+        }
+    } else {
+        ctx.reply('Получен некорректный tgId.');
+    }
+});
+
 
 bot.launch()
