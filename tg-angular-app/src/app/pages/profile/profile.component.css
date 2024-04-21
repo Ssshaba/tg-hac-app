@@ -143,7 +143,6 @@
     justify-content: center;
     column-gap: 5px;
     padding-top: 20px;
-    background-color: white;
     z-index: 2;
 }
 
@@ -151,7 +150,7 @@
     background-color: #FFDD00;
     border: 2px solid #FFF6A1;
     color: #747474;
-    width: 120px;
+    width: 115px;
     height: 82px;
     padding: 10px 0 10px 0;
     margin: 0 5px;
