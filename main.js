@@ -56,15 +56,14 @@ bot.command('start', async (ctx) => {
 
             ctx.reply(
 
-                `Привет!!\n\n` +
-                `Обучалки:\n` +
-                `• [Быстрое начало](${webAppUrl}education)\n` +
+                `Обучалки\n\n` +
                 `• [Как редактировать профиль?](${webAppUrl}edueditprof)\n` +
                 `• [Как познакомиться с коллегой?](${webAppUrl}edumeetcollegue)\n` +
-                `• [Что такое "Статистика" и как её посмотреть?](${webAppUrl}education)\n` +
+                `• [Что такое "Статистика" и как её посмотреть?](${webAppUrl}edustat)\n` +
                 `• [Что такое "Бонусы" и как ими пользоваться?](${webAppUrl}edubonus)\n` +
-                `• [Как администратору добавить профиль сотрудника ?](${webAppUrl}education)\n` +
-                `• [Как администратору удалить профиль сотрудника ?](${webAppUrl}education)\n`,
+                `• [Как администратору добавить профиль сотрудника ?](${webAppUrl}eduadminadd)\n` +
+                `• [Как администратору удалить профиль сотрудника ?](${webAppUrl}eduadminremove)\n` +
+                `• [Просмотр статистики по сотруднику и компании.](${webAppUrl}eduadminstat)\n`,
                 { parse_mode: 'Markdown' }
             );
             return;

@@ -12,6 +12,10 @@ import { EdubonusComponent } from './components/edubonus/edubonus.component';
 import { BonusComponent } from './pages/bonus/bonus.component';
 import { StatisticsComponent } from './pages/statistics/statistics.component';
 import { ProfileformComponent } from './pages/profileform/profileform.component';
+import { EdustatComponent } from './components/edustat/edustat.component';
+import { EduadminaddComponent } from './components/eduadminadd/eduadminadd.component';
+import { EduadminremoveComponent } from './components/eduadminremove/eduadminremove.component';
+import { EduadminstatComponent } from './components/eduadminstat/eduadminstat.component';
 
 export const routes: Routes = [
   { path: '', component: MainpageComponent, pathMatch: 'full' },
@@ -26,5 +30,9 @@ export const routes: Routes = [
   { path: 'edubonus', component: EdubonusComponent},
   { path: 'bonus', component: BonusComponent },
   { path: 'statistics', component: StatisticsComponent },
-  { path: 'profileform', component:ProfileformComponent }
+  { path: 'profileform', component:ProfileformComponent },
+  { path: 'edustat', component: EdustatComponent},
+  { path: 'eduadminadd', component: EduadminaddComponent},
+  { path: 'eduadminremove', component: EduadminremoveComponent},
+  { path: 'eduadminstat', component: EduadminstatComponent}
 ];
