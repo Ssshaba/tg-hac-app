@@ -4,36 +4,37 @@
             <img src="assets/go-to-main.png" alt="Test Picture">
         </div>
         <div class="profile-container">
-            <img src="assets/avatar.png" alt="Avatar" class="avatar">
+            <img src={{userData.photoLink}} alt="Avatar" class="avatar" style="border-radius: 20px;">
             <div class="info">
-                <h2 class="name">Блинова Полина</h2>
-                <p class="age">21 год</p>
+                <h2 class="name">{{ userData.name }}</h2>
+                <p class="age">Возраст: {{ userData.age }}</p>
             </div>
             <div (click)="goToProfileForm()">
                 <button class="edit-button"><img src="assets/edit_icon.png" alt="Edit Icon"></button>
             </div>
         </div>
-        <!-- <div>
-            <h3>Telegram User ID:</h3>
-            <p>{{ telegramUserId }}</p>
-        </div> -->
         <div class="profile-desc">
             <div class="experience-container">
                 <img src="assets/bg-title.png" alt="Background Title" class="bg-title">
+                <h2 class="title">Telegram User ID:</h2>
+                <p class="description">{{ telegramUserId }}</p>
+            </div>
+            <div class="experience-container">
+                <img src="assets/bg-title.png" alt="Background Title" class="bg-title">
                 <h2 class="title">Опыт работы</h2>
-                <p class="description">Работаю супер программистом уровня senior</p>
+                <p class="description">{{ userData.role }}</p>
             </div>
             <div class="separator"></div>
             <div class="experience-container">
                 <img src="assets/bg-title.png" alt="Background Title" class="bg-title">
                 <h2 class="title">Увлечения</h2>
-                <p class="description">Люблю кататься на скейте и смотреть смешариков</p>
+                <p class="description">{{ userData.hobbies }}</p>
             </div>
             <div class="separator"></div>
             <div class="experience-container">
                 <img src="assets/bg-title.png" alt="Background Title" class="bg-title">
                 <h2 class="title">Отдел</h2>
-                <p class="description">Веб-аналитика</p>
+                <p class="description">{{ userData.department }}</p>
             </div>
             <div class="separator"></div>
             <div class="experience-container">
