@@ -20,8 +20,9 @@
     background: linear-gradient(to right, #FFFFFF, #FFFFFF, #FBF6D3);
     justify-content: center;
     border-radius: 20px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.15);
     margin-top: 20px;
+    padding: 15px;
 }
 
 .card-content {

@@ -19,35 +19,31 @@
 
 .card {
     background-color: white;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.15);
+    margin: 0 17px 20px 17px;
+    border-radius: 20px;
     width: calc(100% - 34px);
-    margin: 30px auto;
-    border-radius: 10px;
     display: flex;
-}
-
-.image-container {
-    width: 108px;
-    height: 124px;
-    margin-right: 16px;
+  }
+  
+  .image-container {
+    flex: 1;
     display: flex;
     align-items: center;
-}
-
-.image-container img {
-    width: 100%;
-    height: auto;
-}
-
-.content {
+    justify-content: center;
+  }
+  
+  .content {
     font-family: 'Montserrat', sans-serif;
-    flex-grow: 1;
-    margin-left: 14px;
-    margin-top: 0;
-    max-width: 230px;
-}
+    flex: 1;
+    margin-right: 18px;
+  }
+  
+  .bold-condition {
+    font-weight: bold;
+  }
 
-.content h2 {
+  .content h2 {
     color: black;
     font-size: 16px;
     font-weight: 600;
@@ -60,21 +56,57 @@
     margin-top: 5px;
 }
 
-.bold-condition {
+  
+
+/* .card {
+    background-color: white;
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.15);
+    width: calc(100% - 32px);
+    margin: 20px auto;
+    border-radius: 10px;
     display: flex;
-    align-items: baseline;
+    align-items: center;
+}
+
+.image-container {
+    width: 108px;
+    height: 124px;
+    margin-right: 16px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.content {
+    font-family: 'Montserrat', sans-serif;
+    flex-grow: 1;
+    margin-left: 16px;
+}
+
+.content h2 {
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 16px;
+}
+
+.content p {
     color: #6D7885;
     font-size: 13px;
+    font-weight: 400;
     margin-top: 5px;
+    margin-right: 16px;
+}
+
+.bold-condition {
+    font-weight: 700;
 }
 
 .bold-condition p {
     margin: 0;
-}
-
-.bold {
-    font-weight: 700;
-}
+} */
 
 .spacer {
     height: 120px; /* Высота пустого блока */
