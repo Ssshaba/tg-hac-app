@@ -31,4 +31,8 @@ export class ProfileComponent implements OnInit {
   goToMainPage() {
     this.router.navigate(['/']);
   }
+
+  goToProfileForm() {
+    this.router.navigate(['/profileform']);
+  }
 }

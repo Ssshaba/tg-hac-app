@@ -3,10 +3,10 @@
         <img src="assets/go-to-main.png" alt="Test Picture">
     </div>
     <div class="card">
-        <!-- <img [src]="'assets/' + user.photo" alt="User Photo"> -->
+        <img src={{user.photoLink}} alt="User Photo">
         <div style="padding: 0.5em;">
             <h2>{{ user.name }}</h2>
-            <!-- <p>Возраст: {{ user.age }}</p> -->
+            <p>Возраст: {{ user.age }}</p>
             <div class="detailed">
                 <p>Отдел: {{ user.department }}</p>
                 <a>Подробнее</a>
@@ -14,9 +14,10 @@
         </div>
     </div>
     <div class="buttons">
-        <button class="torefusebtn">Отказаться<img style="height: 24px; width: 24px;" src="assets\ghost_outline_24.png"></button>
+        <button class="torefusebtn" (click)="generateRandomUser()">Отказаться<img style="height: 24px; width: 24px;" src="assets\ghost_outline_24.png"></button>
         <button class="towritebtn">Написать<img style="height: 24px; width: 24px;" src="assets\pen_outline_24.png"></button>
     </div>
+    
     <div class="button-group">
         <button class="icon-button" (click)="goToStatistics()">
             <img src="assets/calendar_icon.png" alt="calendar icon" class="calendar_icon">
