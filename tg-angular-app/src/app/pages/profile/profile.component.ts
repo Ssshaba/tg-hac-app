@@ -11,6 +11,7 @@ import { ProfileService } from '../../services/profile.service';
 export class ProfileComponent implements OnInit {
   user: any;
   userData: any;
+  telegramUserId: string; 
 
   constructor(private router: Router, private profileService: ProfileService) { }
 
