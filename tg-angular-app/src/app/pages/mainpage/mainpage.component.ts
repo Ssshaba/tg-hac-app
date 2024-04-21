@@ -28,15 +28,5 @@ export class MainpageComponent {
     this.router.navigate(['/bonus']);
   }
 
-  rotateAndNavigate() {
-    const logo = document.getElementById('logo');
-    if (logo) {
-      logo.classList.add('rotate'); // Добавляем класс, который запускает анимацию поворота
-    }
-
-    setTimeout(() => {
-      this.findRandomPerson(); // Переходим на страницу после завершения анимации
-    }, 2000); // 2 секунды, так как анимация займет 2 секунды
-  }
 
 }
