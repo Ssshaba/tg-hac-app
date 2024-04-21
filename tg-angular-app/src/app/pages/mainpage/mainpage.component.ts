@@ -1,4 +1,3 @@
-// mainpage.component.ts
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { RandompersonService } from '../../services/randomperson.service';
@@ -27,6 +26,17 @@ export class MainpageComponent {
 
   goToBonus() {
     this.router.navigate(['/bonus']);
+  }
+
+  rotateAndNavigate() {
+    const logo = document.getElementById('logo');
+    if (logo) {
+      logo.classList.add('rotate'); // Добавляем класс, который запускает анимацию поворота
+    }
+
+    setTimeout(() => {
+      this.findRandomPerson(); // Переходим на страницу после завершения анимации
+    }, 2000); // 2 секунды, так как анимация займет 2 секунды
   }
 
 }
